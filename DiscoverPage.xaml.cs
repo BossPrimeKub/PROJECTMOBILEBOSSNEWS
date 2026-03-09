@@ -1,5 +1,6 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input; // เพิ่มบรรทัดนี้เพื่อใช้งาน TappedRoutedEventArgs
 
 namespace MyUnoApp;
 
@@ -22,23 +23,24 @@ public sealed partial class DiscoverPage : Page
         ItemTaiwan.Visibility = "taiwan".Contains(keyword) ? Visibility.Visible : Visibility.Collapsed;
     }
 
-    // เปิดหน้า detail
-    private void OpenInternational(object sender, RoutedEventArgs e)
+    // แก้ไขพารามิเตอร์เป็น TappedRoutedEventArgs
+    private void OpenInternational(object sender, TappedRoutedEventArgs e)
     {
         Frame.Navigate(typeof(DiscoverPageDetail));
     }
 
-    private void GoNews(object sender, RoutedEventArgs e)
+    // แก้ไขพารามิเตอร์เป็น TappedRoutedEventArgs สำหรับ Navbar
+    private void GoNews(object sender, TappedRoutedEventArgs e)
     {
         Frame.Navigate(typeof(MainPage));
     }
 
-    private void GoAlerts(object sender, RoutedEventArgs e)
+    private void GoAlerts(object sender, TappedRoutedEventArgs e)
     {
         Frame.Navigate(typeof(AlertPage));
     }
 
-    private void GoProfile(object sender, RoutedEventArgs e)
+    private void GoProfile(object sender, TappedRoutedEventArgs e)
     {
         Frame.Navigate(typeof(ProfilePage));
     }

@@ -1,0 +1,85 @@
+<Page
+    x:Class="MyUnoApp.InviteFriendsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="Black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/> </Grid.RowDefinitions>
+
+        <Grid Padding="10,40,10,10">
+            <Button Click="GoBack" Background="Transparent" VerticalAlignment="Center" Padding="15">
+                <FontIcon Glyph="&#xE72B;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="18"/>
+            </Button>
+            <TextBlock Text="Invite Friends" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Padding="25" Spacing="20">
+                <TextBlock Text="Get a free one month Ground News Premium subscription for every friend you recommend to Ground News*" 
+                           FontSize="28" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" LineHeight="36"/>
+                
+                <TextBlock Text="When your friend successfully activates their Ground News Premium referral code you'll receive a one month Ground News Premium subscription" 
+                           FontSize="16" Foreground="#AAAAAA" TextWrapping="Wrap" LineHeight="22"/>
+
+                <StackPanel Margin="0,20,0,0" Spacing="8">
+                    <TextBlock Text="Your Invite Code" Foreground="#666666" FontWeight="SemiBold" FontSize="14"/>
+                    <Grid Background="#1A1A1A" BorderBrush="#333333" BorderThickness="1" CornerRadius="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="InviteCodeText" Text="4846913" IsReadOnly="True" Background="Transparent" BorderThickness="0" 
+                                 Foreground="White" VerticalAlignment="Center" Padding="15" FontSize="22" FontWeight="Bold"/>
+                        <Button Grid.Column="1" Content="Copy" Click="CopyCode_Click" Background="Transparent" Foreground="#D7C296" Padding="15" FontWeight="Bold" FontSize="16"/>
+                    </Grid>
+                </StackPanel>
+
+                <Button Content="Share Referral Code" Click="ShareCode_Click"
+                        Background="#D7C296" Foreground="Black" HorizontalAlignment="Stretch" 
+                        Padding="18" CornerRadius="10" FontWeight="Bold" FontSize="18" Margin="0,10,0,0"/>
+
+                <TextBlock Text="* Limited to a maximum of 12 months free subscription" FontSize="12" Foreground="#444444" Margin="0,10,0,0"/>
+                
+                <TextBlock Text="By using Ground News, you agree to our Terms &amp; Conditions" FontSize="12" Foreground="#444444" Margin="0,40,0,0" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Grid Grid.Row="2" Background="#111111" BorderBrush="#222222" BorderThickness="0,1,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Tapped="GoNews" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE12B;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#666666"/>
+                    <TextBlock Text="News" FontSize="11" Foreground="#666666" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Tapped="GoDiscover" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#666666"/>
+                    <TextBlock Text="Discover" FontSize="11" Foreground="#666666" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Tapped="GoAlerts" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE7ED;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#666666"/>
+                    <TextBlock Text="Alerts" FontSize="11" Foreground="#666666" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="3" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="White"/>
+                    <TextBlock Text="Profile" FontSize="11" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

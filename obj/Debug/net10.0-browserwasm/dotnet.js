@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "MyUnoApp",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-mBRVcUB/jTQ52bGtTff18TGzsVb8pDTOgcQw7J9zpj0=",
+    "hash": "sha256-P5GgB6VI9MZg3DepjRasKQJuS2ivgwmYOYJYPBsBx24=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.wijvzrw6gu.js"
@@ -18,8 +18,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
     ],
     "wasmNative": [
       {
-        "name": "dotnet.native.sobm9zbd71.wasm",
-        "integrity": "sha256-rOkkSKvOC9QctQtmwg9jsoNTzM94Jjp2lHfz08ht/CQ=",
+        "name": "dotnet.native.9nshy1xaqr.wasm",
+        "integrity": "sha256-u7777Wj3VCv+UQN8C7QnRJkOsvrb6MitD1aF/cQ6tCA=",
         "cache": "force-cache"
       }
     ],
@@ -1758,8 +1758,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "MyUnoApp.wasm",
-        "name": "MyUnoApp.j642xftfu0.wasm",
-        "integrity": "sha256-q24XBQxmU7Fi+3wL8FRjSahroNBc45Oj3hNsgWY/dCI=",
+        "name": "MyUnoApp.2p5hrruxxx.wasm",
+        "integrity": "sha256-6mFhnF8lh6TBYpAfMwxHaMm/s4m16j7TNzBBcCp1Krw=",
         "cache": "force-cache"
       }
     ],
@@ -1850,8 +1850,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "MyUnoApp.pdb",
-        "name": "MyUnoApp.w5857dm0jc.pdb",
-        "integrity": "sha256-lNNPG0VoJlYOD76kIydIS6Drw3vV6NAsC6x0SWnwqmU=",
+        "name": "MyUnoApp.itndnm71aj.pdb",
+        "integrity": "sha256-KgdRe3k1QzKZG1c1OLBgO75/xZDMuIUAgQpd9ERXCEc=",
         "cache": "force-cache"
       }
     ],

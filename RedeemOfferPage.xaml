@@ -1,0 +1,84 @@
+<Page
+    x:Class="MyUnoApp.RedeemOfferPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="Black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/> </Grid.RowDefinitions>
+
+        <Grid Padding="10,40,10,10">
+            <Button Click="GoBack" Background="Transparent" Padding="15">
+                <FontIcon Glyph="&#xE72B;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="18"/>
+            </Button>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Padding="25" Spacing="25">
+            <TextBlock Text="Redeem your Offer code" FontSize="44" FontWeight="Bold" 
+                       Foreground="White" TextWrapping="Wrap" LineHeight="50"/>
+
+            <Border BorderBrush="#333333" BorderThickness="1" CornerRadius="12" Padding="15,12" Background="#1A1A1A">
+                <StackPanel>
+                    <TextBlock Text="Enter Offer Code" FontSize="13" Foreground="Gray" Margin="0,0,0,5"/>
+                    <Grid>
+                        <TextBox x:Name="OfferCodeInput" Text="GDO61PQ" FontSize="20" FontWeight="SemiBold" 
+                                 Background="Transparent" BorderThickness="0" Foreground="White" VerticalAlignment="Center"/>
+                        <Button HorizontalAlignment="Right" Click="ClearText_Click" Background="Transparent" Padding="5">
+                            <FontIcon Glyph="&#xE711;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="16"/>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Button Content="Redeem" Click="Redeem_Click"
+                    Background="#D7C296" Foreground="Black" HorizontalAlignment="Stretch" 
+                    Padding="18" CornerRadius="10" FontWeight="Bold" FontSize="18"/>
+
+            <TextBlock FontSize="12" Foreground="Gray" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap">
+                By creating an account, you agree to the <Underline>Terms of Service</Underline> &amp; <LineBreak/> acknowledge our <Underline>Privacy Policy</Underline>.
+            </TextBlock>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Background="#111111" BorderBrush="#222222" BorderThickness="0,1,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Tapped="GoNews" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE12B;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#666666"/>
+                    <TextBlock Text="News" FontSize="11" Foreground="#666666" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Tapped="GoDiscover" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#666666"/>
+                    <TextBlock Text="Discover" FontSize="11" Foreground="#666666" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Tapped="GoAlerts" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE7ED;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#666666"/>
+                    <TextBlock Text="Alerts" FontSize="11" Foreground="#666666" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="3" Background="Transparent">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4">
+                    <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="White"/>
+                    <TextBlock Text="Profile" FontSize="11" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Border x:Name="InvalidToast" VerticalAlignment="Bottom" HorizontalAlignment="Center" 
+                Background="#333333" CornerRadius="6" Padding="20,10" Margin="0,0,0,120" Visibility="Collapsed"> 
+            <TextBlock Text="Referral Code Invalid" Foreground="White" FontSize="14" FontWeight="SemiBold"/>
+        </Border>
+    </Grid>
+</Page>

@@ -3,9 +3,9 @@ using Microsoft.UI.Xaml.Controls;
 
 namespace MyUnoApp;
 
-public sealed partial class AlertDetailPage : Page
+public sealed partial class AlertPageDetail : Page
 {
-    public AlertDetailPage()
+    public AlertPageDetail()
     {
         this.InitializeComponent();
     }
