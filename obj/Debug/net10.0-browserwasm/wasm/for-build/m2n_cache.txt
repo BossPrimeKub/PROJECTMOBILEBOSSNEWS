@@ -1,0 +1,8 @@
+__Native
+__Internal
+unoicu
+libSkiaSharp
+libHarfBuzzSharp
+libSystem.Native
+libSystem.IO.Compression.Native
+libSystem.Globalization.Native
